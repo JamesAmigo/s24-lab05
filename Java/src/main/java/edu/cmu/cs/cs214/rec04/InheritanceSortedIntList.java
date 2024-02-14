@@ -49,7 +49,7 @@ public class InheritanceSortedIntList extends SortedIntList{
     }
 
     /** 
-     * Returns the total number of elements added to the list.
+     * Returns the total number of elements added to the list. Does not decrease when elements are removed.
      * 
      * @return the total number of elements added to the list
      */
