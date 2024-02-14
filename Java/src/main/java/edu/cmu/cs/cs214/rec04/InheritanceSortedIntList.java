@@ -16,26 +16,24 @@ public class InheritanceSortedIntList extends SortedIntList{
 
     @Override
     public boolean add(int num) {
-        switch (super.add(num))
-        {
-            case true:
-                totalAdded++;
-                return true;
-            case false:
-                return false;
+        boolean result = super.add(num);
+        if(result) {
+            totalAdded++;
+            return true;
         }
+        else
+            return false;
     }
 
     @Override
     public boolean addAll(IntegerList nums) {
-        switch (super.addAll(nums))
-        {
-            case true:
-                totalAdded += nums.length;
-                return true;
-            case false:
-                return false;
+        boolean result = super.addAll(nums);
+        if(result) {
+            totalAdded += nums.size();
+            return true;
         }
+        else
+            return false;
     }
 
     public int getTotalAdded() {
