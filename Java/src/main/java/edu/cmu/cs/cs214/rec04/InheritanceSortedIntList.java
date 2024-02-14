@@ -41,7 +41,6 @@ public class InheritanceSortedIntList extends SortedIntList{
     public boolean addAll(IntegerList nums) {
         boolean result = super.addAll(nums);
         if(result) {
-            totalAdded += nums.size();
             return true;
         }
         else
