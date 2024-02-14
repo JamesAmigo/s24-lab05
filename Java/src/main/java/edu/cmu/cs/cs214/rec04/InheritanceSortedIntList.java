@@ -14,6 +14,12 @@ public class InheritanceSortedIntList extends SortedIntList{
     // Write your implementation below with API documentation
     private int totalAdded;
 
+    /** 
+     * Adds an element to the sorted list and updates the totalAdded count.
+     * 
+     * @param num the number to be added to the list
+     * @return true if the number was added to the list, false otherwise
+     */
     @Override
     public boolean add(int num) {
         boolean result = super.add(num);
@@ -25,6 +31,12 @@ public class InheritanceSortedIntList extends SortedIntList{
             return false;
     }
 
+    /** 
+     * Adds all elements from the given list to the sorted list and updates the totalAdded count.
+     * 
+     * @param nums the list of numbers to be added to the list
+     * @return true if the numbers were added to the list, false otherwise
+     */
     @Override
     public boolean addAll(IntegerList nums) {
         boolean result = super.addAll(nums);
@@ -36,6 +48,11 @@ public class InheritanceSortedIntList extends SortedIntList{
             return false;
     }
 
+    /** 
+     * Returns the total number of elements added to the list.
+     * 
+     * @return the total number of elements added to the list
+     */
     public int getTotalAdded() {
         return totalAdded;
     }
