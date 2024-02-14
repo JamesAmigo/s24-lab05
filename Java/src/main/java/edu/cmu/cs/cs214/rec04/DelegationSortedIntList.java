@@ -10,7 +10,7 @@ package edu.cmu.cs.cs214.rec04;
  *
  */
 
-public class DelegationSortedIntList {
+public class DelegationSortedIntList implements IntegerList{
     // Write your implementation below with API documentation
     private SortedIntList list;
     private int totalAdded;
@@ -57,7 +57,46 @@ public class DelegationSortedIntList {
     }
 
     /** 
-     * Returns the total number of elements added to the list.
+     * Returns the element at the index in the list.
+     * 
+     * @param index the index of the element to be returned
+     * @return the element at the index
+     */
+    public int get(int index) {
+        return list.get(index);
+    }
+
+    /** 
+     * Removes the first occurrence of the specified element from the list.
+     * 
+     * @param num the number to be removed from the list
+     * @return true if the number was removed from the list, false otherwise
+     */
+    public boolean remove(int num) {
+        return list.remove(num);
+    }
+
+    /** 
+     * Removes all elements from the list that are contained in the specified list.
+     * 
+     * @param nums the list of numbers to be removed from the list
+     * @return true if the numbers were removed from the list, false otherwise
+     */
+    public boolean removeAll(IntegerList nums) {
+        return list.removeAll(nums);
+    }
+
+    /** 
+     * Returns the number of elements in the list.
+     * 
+     * @return the number of elements in the list
+     */
+    public int size() {
+        return list.size();
+    }
+
+    /** 
+     * Returns the total number of elements added to the list. Does not decrease when elements are removed.
      * 
      * @return the total number of elements added to the list
      */
